@@ -8,11 +8,18 @@ from models.base_model import BaseModel
 from models import storage
 from shlex import split
 import re
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
+
 
 class HBNBCommand(cmd.Cmd):
     """ entry point of the interpreter """
 
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
